@@ -1,0 +1,210 @@
+{
+  "protocol_name": "provenance_matched",
+  "metadata": {
+    "protocol": "provenance_matched",
+    "rationale": "Draws benign and attack instances from comparable test-partition pools to eliminate split-provenance confounding.",
+    "target_domain": "d",
+    "seed": 42,
+    "eval_size": 2000,
+    "eval_attack_ratio": 0.5,
+    "train_size": 4000,
+    "train_attack_ratio": 0.5,
+    "target_pool_available": 50000,
+    "source_pool_available": 50000,
+    "leakage_audit_cross": {
+      "train_size": 4000,
+      "test_size": 2000,
+      "query_overlap_count": 0,
+      "has_leakage": false,
+      "normalized_query_overlap_count": 0,
+      "template_overlap_count": 0,
+      "overlapping_queries_sample": [],
+      "overlapping_templates_sample": []
+    },
+    "leakage_audit_within": {
+      "train_size": 4000,
+      "test_size": 2000,
+      "query_overlap_count": 0,
+      "has_leakage": false,
+      "normalized_query_overlap_count": 0,
+      "template_overlap_count": 35,
+      "overlapping_queries_sample": [],
+      "overlapping_templates_sample": [
+        "OHR-D1",
+        "OHR-D3",
+        "OHR-D4",
+        "OHR-D5",
+        "OHR-I1"
+      ]
+    }
+  },
+  "eval_summary": {
+    "name": "eval_provenance_matched_d",
+    "total_records": 2000,
+    "benign_count": 1000,
+    "attack_count": 1000,
+    "attack_ratio": 0.5,
+    "unique_templates": 38,
+    "technique_distribution": {
+      "union": 56,
+      "time": 81,
+      "stacked": 35,
+      "boolean": 673,
+      "error": 132,
+      "inline": 23
+    },
+    "statement_type_distribution": {
+      "insert": 313,
+      "select": 1262,
+      "delete": 152,
+      "update": 263,
+      "admin": 10
+    },
+    "domain_distribution": {
+      "d": 2000
+    },
+    "original_split_distribution": {
+      "test": 2000
+    },
+    "source_file": null,
+    "metadata": {
+      "sample_type": "stratified_test",
+      "requested_total": 2000,
+      "target_attack_ratio": 0.5,
+      "benign_count": 1000,
+      "attack_count": 1000,
+      "benign_pool_size": 44867,
+      "attack_pool_size": 5133,
+      "seed": 42
+    }
+  },
+  "cross_train_summary": {
+    "name": "train_cross_provenance_matched",
+    "total_records": 4000,
+    "benign_count": 2000,
+    "attack_count": 2000,
+    "attack_ratio": 0.5,
+    "unique_templates": 54,
+    "technique_distribution": {
+      "boolean": 1631,
+      "error": 154,
+      "union": 91,
+      "time": 64,
+      "stacked": 35,
+      "inline": 23,
+      "insider": 2
+    },
+    "statement_type_distribution": {
+      "update": 733,
+      "insert": 1009,
+      "delete": 377,
+      "select": 1861,
+      "admin": 18,
+      "insider": 2
+    },
+    "domain_distribution": {
+      "b": 4000
+    },
+    "original_split_distribution": {
+      "test": 4000
+    },
+    "source_file": null,
+    "metadata": {
+      "sample_type": "stratified_train",
+      "requested_total": 4000,
+      "target_attack_ratio": 0.5,
+      "benign_count": 2000,
+      "attack_count": 2000,
+      "benign_pool_size": 44876,
+      "attack_pool_size": 5088,
+      "seed": 42
+    }
+  },
+  "within_train_summary": {
+    "name": "train_within_provenance_matched_d",
+    "total_records": 4000,
+    "benign_count": 2000,
+    "attack_count": 2000,
+    "attack_ratio": 0.5,
+    "unique_templates": 41,
+    "technique_distribution": {
+      "boolean": 1333,
+      "error": 265,
+      "union": 123,
+      "inline": 25,
+      "time": 159,
+      "stacked": 83,
+      "insider": 12
+    },
+    "statement_type_distribution": {
+      "select": 2213,
+      "delete": 309,
+      "update": 644,
+      "insert": 789,
+      "admin": 33,
+      "insider": 12
+    },
+    "domain_distribution": {
+      "d": 4000
+    },
+    "original_split_distribution": {
+      "test": 4000
+    },
+    "source_file": null,
+    "metadata": {
+      "sample_type": "stratified_train",
+      "requested_total": 4000,
+      "target_attack_ratio": 0.5,
+      "benign_count": 2000,
+      "attack_count": 2000,
+      "benign_pool_size": 24938,
+      "attack_pool_size": 4133,
+      "seed": 42
+    }
+  },
+  "repeat_cross_train_summary": {
+    "name": "train_cross_provenance_matched",
+    "total_records": 4000,
+    "benign_count": 2000,
+    "attack_count": 2000,
+    "attack_ratio": 0.5,
+    "unique_templates": 54,
+    "technique_distribution": {
+      "boolean": 1631,
+      "error": 154,
+      "union": 91,
+      "time": 64,
+      "stacked": 35,
+      "inline": 23,
+      "insider": 2
+    },
+    "statement_type_distribution": {
+      "update": 733,
+      "insert": 1009,
+      "delete": 377,
+      "select": 1861,
+      "admin": 18,
+      "insider": 2
+    },
+    "domain_distribution": {
+      "b": 4000
+    },
+    "original_split_distribution": {
+      "test": 4000
+    },
+    "source_file": null,
+    "metadata": {
+      "sample_type": "stratified_train",
+      "requested_total": 4000,
+      "target_attack_ratio": 0.5,
+      "benign_count": 2000,
+      "attack_count": 2000,
+      "benign_pool_size": 44876,
+      "attack_pool_size": 5088,
+      "seed": 42
+    }
+  },
+  "eval_queries_count": 2000,
+  "cross_train_queries_count": 4000,
+  "within_train_queries_count": 4000
+}
